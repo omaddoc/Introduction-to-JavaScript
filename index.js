@@ -153,10 +153,62 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.ceil(Math.random() * 3);
 function game(user, computer) {
-  /*add your code here*/
+  // let result = "";
+  // if (user === "scissors") {
+  //   user = 3;
+  // } else if (user === "rock") {
+  //   user = 2;
+  // } else if (user === "paper") {
+  //   user = 1;
+  // }
+
+  // if (
+  //   (user > computer && computer !== 1) ||
+  //   (user > computer && computer !== 2) ||
+  //   (user < computer && computer !== 3) ||
+  //   user < computer
+  // ) {
+  //   result = `you win!`;
+  // } else if (
+  //   (computer > user && user !== 1) ||
+  //   (computer > user && user !== 2) ||
+  //   (computer < user && user !== 3) ||
+  //   computer < user
+  // ) {
+  //   result = `you lose!`;
+  // } else if (user === computer) {
+  //   result = `it's a tie!`;
+  // }
+  if (computer === 1) {
+    computer = "rock";
+  } else if (computer === 2) {
+    computer = "paper";
+  } else if (computer === 3) {
+    computer = "scissors";
+  }
+
+  if (
+    (user === "rock" && computer !== "paper" && computer !== "rock") ||
+    (user === "paper" && computer !== "scissors" && computer !== "paper") ||
+    (user === "scissors" && computer !== "rock" && computer !== "scissors")
+  ) {
+    return "you win!";
+  } else if (
+    (computer === "rock" && user !== "paper" && user !== "rock") ||
+    (computer === "paper" && user !== "scissors" && user !== "paper") ||
+    (computer === "scissors" && user !== "rock" && user !== "scissors")
+  ) {
+    return "you lose!";
+  } else {
+    return "it's a tie";
+  }
+
+  // return result;
 }
+
+console.log(`Task 4: ${game("rock", computer)}`);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
