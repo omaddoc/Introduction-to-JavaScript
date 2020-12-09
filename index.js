@@ -221,8 +221,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
+function miles(kilometers) {
   /*add your code here*/
+  return kilometers * 0.621371;
 }
 
 //Task 5b - Feet to CM
@@ -233,9 +234,18 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
+function feet(feet) {
   /*add your code here*/
+  return feet / 30.48;
 }
+
+console.log(
+  `Task 5: 5 kilometers converted to miles using the kilometers to miles function is ${miles(
+    5
+  )}, and 5 feet converted to centimeters using the feet to centimeters function is ${feet(
+    5
+  )}`
+);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
