@@ -283,9 +283,24 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
+function grade(score) {
   /*Your Code here */
+  let grade;
+  if (score < 60) {
+    grade = "you got an F";
+  } else if (score >= 60 && score <= 69) {
+    grade = "you got a D";
+  } else if (score >= 70 && score <= 79) {
+    grade = "you got a C";
+  } else if (score >= 80 && score <= 89) {
+    grade = "you got a B";
+  } else {
+    grade = "you got an A";
+  }
+
+  return grade;
 }
+console.log(`Task 7: ${grade(100)}`);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
